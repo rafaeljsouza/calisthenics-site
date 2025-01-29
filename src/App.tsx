@@ -33,7 +33,7 @@ const App: React.FC = () => {
         <header className="bg-white shadow-sm">
           <div className="max-w-4xl mx-auto p-4">
             <div className="flex items-center justify-between">
-              <h1 className="text-2xl font-bold">Rotina de Calistenia</h1>
+              <h1 className="text-2xl font-bold">Treino da Lena</h1>
               <div className="flex gap-4">
                 <Link 
                   to="/" 

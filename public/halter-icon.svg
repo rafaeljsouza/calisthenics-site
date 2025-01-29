@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Base color azul escuro -->
+  <style>
+    .primary-color { fill: #1a365d; }
+  </style>
+  
+  <!-- Barra central -->
+  <rect class="primary-color" x="30" y="45" width="40" height="10" rx="2"/>
+  
+  <!-- Pesos da esquerda -->
+  <rect class="primary-color" x="10" y="35" width="15" height="30" rx="2"/>
+  <rect class="primary-color" x="20" y="40" width="8" height="20" rx="2"/>
+  
+  <!-- Pesos da direita -->
+  <rect class="primary-color" x="75" y="35" width="15" height="30" rx="2"/>
+  <rect class="primary-color" x="72" y="40" width="8" height="20" rx="2"/>
+</svg>
