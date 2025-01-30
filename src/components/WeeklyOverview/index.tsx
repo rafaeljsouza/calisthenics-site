@@ -13,7 +13,8 @@ export const WeeklyOverview: React.FC = () => {
         <h2 className="text-2xl font-bold mb-4">Sobre os Níveis dos Exercícios</h2>
         <div className="bg-white rounded-lg shadow-md p-6">
           <p className="mb-4">
-            Cada exercício possui uma versão mais fácil e uma mais desafiadora. 
+            Cada exercício possui uma versão mais fácil e uma mais desafiadora.
+            Clique em "mais informações" em cada exercício para ver a progressão completa. 
             Comece sempre pela versão mais fácil e progrida gradualmente:
           </p>
           <ul className="space-y-4 list-disc pl-6">
@@ -55,9 +56,9 @@ export const WeeklyOverview: React.FC = () => {
                 <ul className="space-y-2">
                   {weeklyExercises[index].exercises.map((exercise, i) => (
                     <li key={i} className="flex flex-col">
-                      <span className="font-medium">{exercise.name}</span>
+                      <span className="font-medium">{exercise.name}: </span>
                       <span className="text-gray-600 text-sm">
-                        {exercise.repetitions}
+                         {exercise.repetitions}
                       </span>
                     </li>
                   ))}

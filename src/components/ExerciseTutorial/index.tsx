@@ -1,3 +1,5 @@
+//ExerciseTutorial/index.tsx
+
 import React from 'react';
 import { X } from 'lucide-react';
 import { Exercise } from '../../types';
@@ -16,35 +18,35 @@ export const ExerciseTutorial: React.FC<ExerciseTutorialProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 bg-white p-4 border-b flex justify-between items-center">
-          <h2 className="text-xl font-bold">Tutorial: {exercise.name}</h2>
+    <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-lg w-full max-w-3xl max-h-[90vh] overflow-y-auto">
+        <div className="sticky top-0 bg-blue-600 text-white p-6 flex justify-between items-center">
+          <h2 className="text-2xl font-bold">Tutorial: {exercise.name}</h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-full"
+            className="p-3 bg-red-500 hover:bg-red-600 rounded-full transition-colors"
             aria-label="Fechar tutorial"
           >
-            <X className="w-6 h-6" />
+            <X className="w-8 h-8" />
           </button>
         </div>
         
-        <div className="p-6 space-y-8">
+        <div className="p-8 space-y-10">
           {/* Níveis */}
           <section>
-            <h3 className="text-lg font-bold text-blue-700 mb-4">Níveis</h3>
-            <div className="grid gap-4 md:grid-cols-3">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-bold mb-2">Nível 1</h4>
-                <p>{exercise.tutorial.niveis.nivel1}</p>
+            <h3 className="text-xl font-bold text-blue-700 mb-6">Níveis</h3>
+            <div className="grid gap-6 md:grid-cols-3">
+              <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
+                <h4 className="font-bold text-lg mb-3 text-blue-800">Nível 1</h4>
+                <p className="text-gray-700">{exercise.tutorial.niveis.nivel1}</p>
               </div>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-bold mb-2">Nível 2</h4>
-                <p>{exercise.tutorial.niveis.nivel2}</p>
+              <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
+                <h4 className="font-bold text-lg mb-3 text-blue-800">Nível 2</h4>
+                <p className="text-gray-700">{exercise.tutorial.niveis.nivel2}</p>
               </div>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-bold mb-2">Nível 3</h4>
-                <p>{exercise.tutorial.niveis.nivel3}</p>
+              <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
+                <h4 className="font-bold text-lg mb-3 text-blue-800">Nível 3</h4>
+                <p className="text-gray-700">{exercise.tutorial.niveis.nivel3}</p>
               </div>
             </div>
           </section>
