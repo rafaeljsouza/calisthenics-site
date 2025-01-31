@@ -48,10 +48,10 @@ export const WeeklyOverview: React.FC = () => {
 
       <section>
         <h2 className="text-2xl font-bold mb-4">Rotina Semanal</h2>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
           {daysOfWeek.map((day, index) => (
             <div key={day} className="bg-white rounded-lg shadow-md p-4">
-              <h3 className="text-xl font-bold mb-2 text-blue-600">{day}</h3>
+              <h3 className="text-xl font-bold mb-2 text-blue-600 ">{day}</h3>
               {weeklyExercises[index].exercises.length > 0 ? (
                 <ul className="space-y-2">
                   {weeklyExercises[index].exercises.map((exercise, i) => (

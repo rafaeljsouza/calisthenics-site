@@ -76,7 +76,7 @@ export const flexaoPernas: Exercise[] = [
       {
         name: "Flexão inclinada",
         videoUrl: "https://www.youtube.com/shorts/so5nuzZWwmI",
-        description: " 3 de 40. Use uma cadeira ou mesa estável como apoio. quanto mais inclinado, mais difícil"
+        description: " 3 de 40 rep"
       }
     ]
   },
@@ -184,7 +184,7 @@ export const puxadaAgachamento: Exercise[] = [
       {
         name: "Puxada inclinada",
         videoUrl: "https://www.youtube.com/watch?v=0X2GYq9ytTc",
-        description: "só o primeiro movimento do vídeo, use uma toalha ou corda. 3 de 30 repetições"
+        description: "só o primeiro movimento do vídeo. 3 de 30 repetições"
       }
     ]
   },
@@ -240,7 +240,7 @@ export const puxadaAgachamento: Exercise[] = [
         {
           name: "Agachamento com apoio alto",
           videoUrl: "https://www.youtube.com/shorts/BcPfuGRtZFY",
-          description: "3 de 30, um apoio alto como uma mesa, bancada, máquina de lavar."
+          description: "3 de 30 rep."
         }
       ]
     }];
@@ -297,7 +297,7 @@ export const puxadaAgachamento: Exercise[] = [
           {
             name: "Elevação de quadril com apoio de braços",
             videoUrl: "https://www.youtube.com/shorts/rM5mBhplrE0",
-            description: "pode sentar no chão entre as execuções, 3 de 30"
+            description: "pode encostar no chão entre as execuções, 3 de 30 rep"
           }
         ]
       },

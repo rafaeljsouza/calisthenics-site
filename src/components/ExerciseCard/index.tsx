@@ -15,28 +15,28 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({ exercise }) => {
   }, [exercise]);
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md mb-6 border-2 border-gray-200">
-      <h2 className="text-2xl font-bold mb-3 text-blue-700">{exercise.name}</h2>
-      <p className="text-gray-700 mb-4 text-lg">{exercise.description}</p>
-      <p className="font-semibold mb-4 text-lg">Repetições: {exercise.repetitions}</p>
-      
-      <button
-        onClick={() => setIsTutorialOpen(true)}
-        className="mb-6 px-6 py-3 bg-green-600 text-white text-lg font-bold rounded-lg hover:bg-green-700 transition-colors shadow-md"
-      >
-        Mais informações
-      </button>
+    <div className="bg-white p-4 rounded-lg shadow-md mb-6 border border-gray-200">
+  <h2 className="text-xl font-bold mb-2 text-blue-700">{exercise.name}</h2>
+  <p className="text-gray-700 mb-3 text-sm">{exercise.description}</p>
+  <p className="font-semibold mb-3 text-sm">Repetições: {exercise.repetitions}</p>
+  
+  <button
+    onClick={() => setIsTutorialOpen(true)}
+    className="mb-4 px-4 py-2 bg-green-500 text-white text-sm font-medium rounded-lg hover:bg-green-600 transition-colors"
+  >
+    Mais informações
+  </button>
 
-      <div className="aspect-video mb-6 bg-gray-100 rounded-lg overflow-hidden shadow-md">
-        <iframe
-          className="w-full h-full"
-          src={getYoutubeEmbedUrl(currentVideo)}
-          title={`${exercise.name} - ${currentVariation}`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
+  <div className="aspect-video mb-4 bg-gray-100 rounded-lg overflow-hidden">
+    <iframe
+      className="w-full h-full"
+      src={getYoutubeEmbedUrl(currentVideo)}
+      title={`${exercise.name} - ${currentVariation}`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
 
       <div className="space-y-3 mt-6">
         <h3 className="font-bold text-xl text-blue-700 mb-3">Variações:</h3>

@@ -27,29 +27,31 @@ const DailyExercises: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 p-2 sm:p-4 max-w-4xl mx-auto">
         <FontSizeController />
         
         <header className="bg-white shadow-sm">
           <div className="max-w-4xl mx-auto p-4">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <h1 className="text-2xl font-bold">Treino da Lena</h1>
-              <div className="flex gap-4">
-                <Link 
-                  to="/" 
-                  className="flex items-center gap-2 text-gray-600 hover:text-blue-600"
-                >
-                  <Calendar className="w-6 h-6" />
-                  <span className="hidden sm:inline">Exercícios</span>
-                </Link>
-                <Link 
-                  to="/visao-geral" 
-                  className="flex items-center gap-2 text-gray-600 hover:text-blue-600"
-                >
-                  <Info className="w-6 h-6" />
-                  <span className="hidden sm:inline">Visão Geral</span>
-                </Link>
-              </div>
+              <nav className="mb-4">
+                <div className="flex space-x-4">
+                  <Link 
+                    to="/" 
+                    className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center"
+                  >
+                    <Calendar className="w-5 h-5 mr-2" />
+                    <span>Exercícios</span>
+                  </Link>
+                  <Link 
+                    to="/visao-geral" 
+                    className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors flex items-center"
+                  >
+                    <Info className="w-5 h-5 mr-2" />
+                    <span>Visão Geral</span>
+                  </Link>
+                </div>
+              </nav>
             </div>
           </div>
         </header>
