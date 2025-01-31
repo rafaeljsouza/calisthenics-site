@@ -27,30 +27,28 @@ const DailyExercises: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 p-2 sm:p-4 max-w-4xl mx-auto">
+      <div className="min-h-screen w-full max-w-full overflow-x-hidden">
         <FontSizeController />
         
         <header className="bg-white shadow-sm">
           <div className="max-w-4xl mx-auto p-4">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <h1 className="text-2xl font-bold">Treino da Lena</h1>
-              <nav className="mb-4">
-                <div className="flex space-x-4">
-                  <Link 
-                    to="/" 
-                    className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center"
-                  >
-                    <Calendar className="w-5 h-5 mr-2" />
-                    <span>Exercícios</span>
-                  </Link>
-                  <Link 
-                    to="/visao-geral" 
-                    className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors flex items-center"
-                  >
-                    <Info className="w-5 h-5 mr-2" />
-                    <span>Visão Geral</span>
-                  </Link>
-                </div>
+              <nav className="flex flex-wrap justify-center sm:justify-start gap-2 mb-4">
+                <Link 
+                  to="/" 
+                  className="px-3 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors flex items-center text-sm"
+                >
+                  <Calendar className="w-4 h-4 mr-1" />
+                  <span>Exercícios</span>
+                </Link>
+                <Link 
+                  to="/visao-geral" 
+                  className="px-3 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors flex items-center text-sm"
+                >
+                  <Info className="w-4 h-4 mr-1" />
+                  <span>Visão Geral</span>
+                </Link>
               </nav>
             </div>
           </div>

@@ -15,28 +15,28 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({ exercise }) => {
   }, [exercise]);
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md mb-6 border border-gray-200">
-  <h2 className="text-xl font-bold mb-2 text-blue-700">{exercise.name}</h2>
-  <p className="text-gray-700 mb-3 text-sm">{exercise.description}</p>
-  <p className="font-semibold mb-3 text-sm">Repetições: {exercise.repetitions}</p>
+    <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md mb-4 sm:mb-6 border border-gray-200">
+    <h2 className="text-lg sm:text-xl font-bold mb-2 text-blue-700">{exercise.name}</h2>
+    <p className="text-gray-700 mb-2 sm:mb-3 text-sm">{exercise.description}</p>
+    <p className="text-gray-800 font-semibold mb-2 sm:mb-3 text-sm">Repetições: {exercise.repetitions}</p>
   
   <button
     onClick={() => setIsTutorialOpen(true)}
-    className="mb-4 px-4 py-2 bg-green-500 text-white text-sm font-medium rounded-lg hover:bg-green-600 transition-colors"
+    className="mb-3 sm:mb-4 px-3 py-1.5 bg-green-500 text-white text-sm font-medium rounded-lg hover:bg-green-600 transition-colors"
   >
     Mais informações
   </button>
 
-  <div className="aspect-video mb-4 bg-gray-100 rounded-lg overflow-hidden">
-    <iframe
-      className="w-full h-full"
-      src={getYoutubeEmbedUrl(currentVideo)}
-      title={`${exercise.name} - ${currentVariation}`}
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
+  <div className="aspect-w-16 aspect-h-9 mb-4">
+  <iframe
+    className="w-full h-full"
+    src={getYoutubeEmbedUrl(currentVideo)}
+    title={`${exercise.name} - ${currentVariation}`}
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
 
       <div className="space-y-3 mt-6">
         <h3 className="font-bold text-xl text-blue-700 mb-3">Variações:</h3>
