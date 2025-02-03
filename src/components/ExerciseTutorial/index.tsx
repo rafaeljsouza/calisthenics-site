@@ -1,5 +1,3 @@
-//ExerciseTutorial/index.tsx
-
 import React from 'react';
 import { X } from 'lucide-react';
 import { Exercise } from '../../types';
@@ -56,7 +54,7 @@ export const ExerciseTutorial: React.FC<ExerciseTutorialProps> = ({
             <h3 className="text-lg font-bold text-blue-700 mb-4">Padrões de Treino</h3>
             <div className="space-y-2">
               {exercise.tutorial.padroes.map((padrao, index) => (
-                <p key={index}>{padrao}</p>
+                <p key={index} className="text-gray-700">{padrao}</p>
               ))}
             </div>
           </section>
@@ -66,7 +64,7 @@ export const ExerciseTutorial: React.FC<ExerciseTutorialProps> = ({
             <h3 className="text-lg font-bold text-blue-700 mb-4">Dicas de Execução</h3>
             <ul className="list-disc pl-6 space-y-2">
               {exercise.tutorial.dicas.map((dica, index) => (
-                <li key={index}>{dica}</li>
+                <li key={index} className="text-gray-700">{dica}</li>
               ))}
             </ul>
           </section>
@@ -76,7 +74,7 @@ export const ExerciseTutorial: React.FC<ExerciseTutorialProps> = ({
             <h3 className="text-lg font-bold text-blue-700 mb-4">Passo a Passo</h3>
             <ol className="list-decimal pl-6 space-y-2">
               {exercise.tutorial.passos.map((passo, index) => (
-                <li key={index}>{passo}</li>
+                <li key={index} className="text-gray-700">{passo}</li>
               ))}
             </ol>
           </section>
@@ -87,19 +85,19 @@ export const ExerciseTutorial: React.FC<ExerciseTutorialProps> = ({
             
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold mb-2">Para tornar mais desafiador:</h4>
+                <h4 className="font-semibold mb-2 text-gray-800">Para tornar mais desafiador:</h4>
                 <ul className="list-disc pl-6 space-y-2">
                   {exercise.tutorial.progressao.maisDesafiador.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li key={index} className="text-gray-700">{item}</li>
                   ))}
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-semibold mb-2">Para tornar mais fácil:</h4>
+                <h4 className="font-semibold mb-2 text-gray-800">Para tornar mais fácil:</h4>
                 <ul className="list-disc pl-6 space-y-2">
                   {exercise.tutorial.progressao.maisFacil.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li key={index} className="text-gray-700">{item}</li>
                   ))}
                 </ul>
               </div>

@@ -10,14 +10,14 @@ export const WeeklyOverview: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-4">
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Sobre os Níveis dos Exercícios</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-700 text-blue-700">Sobre os Níveis dos Exercícios</h2>
         <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="mb-4">
+          <p className="mb-4 text-gray-700">
             Cada exercício possui uma versão mais fácil e uma mais desafiadora.
             Clique em "mais informações" em cada exercício para ver a progressão completa. 
             Comece sempre pela versão mais fácil e progrida gradualmente:
           </p>
-          <ul className="space-y-4 list-disc pl-6">
+          <ul className="space-y-4 list-disc pl-6 mb-4 text-gray-700">
             <li>
               <strong>Flexão na parede:</strong> Comece na vertical (mais fácil) e 
               vá inclinando o corpo conforme ficar mais forte (mais difícil).
@@ -47,7 +47,7 @@ export const WeeklyOverview: React.FC = () => {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold mb-4">Rotina Semanal</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-700">Rotina Semanal</h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
           {daysOfWeek.map((day, index) => (
             <div key={day} className="bg-white rounded-lg shadow-md p-4">
@@ -72,9 +72,9 @@ export const WeeklyOverview: React.FC = () => {
       </section>
 
       <section className="mt-8">
-        <h2 className="text-2xl font-bold mb-4">Dicas Importantes</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-700">Dicas Importantes</h2>
         <div className="bg-white rounded-lg shadow-md p-6">
-          <ul className="space-y-4 list-disc pl-6">
+          <ul className="space-y-4 list-disc pl-6 mb-4 text-gray-700">
             <li>
               <strong>Respiração:</strong> Inspire antes de contrair, contraia e 
               expire enquanto relaxa

@@ -33,7 +33,7 @@ const App: React.FC = () => {
         <header className="bg-white shadow-sm">
           <div className="max-w-4xl mx-auto p-4">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <h1 className="text-2xl font-bold">Treino da Lena</h1>
+              <h1 className="text-2xl font-bold text-blue-700">Treino da Lena</h1>
               <nav className="flex flex-wrap justify-center sm:justify-start gap-2 mb-4">
                 <Link 
                   to="/" 
