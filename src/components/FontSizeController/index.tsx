@@ -15,14 +15,14 @@ export const FontSizeController: React.FC = () => {
     <div className="fixed top-4 right-4 flex gap-2 bg-white p-2 rounded-lg shadow-md">
       <button
         onClick={() => adjustFontSize(false)}
-        className="p-2 bg-gray-100 rounded hover:bg-gray-200"
+        className="p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-700"
         aria-label="Diminuir tamanho da fonte"
       >
         A-
       </button>
       <button
         onClick={() => adjustFontSize(true)}
-        className="p-2 bg-gray-100 rounded hover:bg-gray-200"
+        className="p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-700"
         aria-label="Aumentar tamanho da fonte"
       >
         A+
