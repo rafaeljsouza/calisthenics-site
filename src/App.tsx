@@ -27,7 +27,7 @@ const DailyExercises: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen w-full max-w-full overflow-x-hidden">
+      <div className="min-h-screen w-full bg-gray-50">
         <FontSizeController />
         
         <header className="bg-white shadow-sm">

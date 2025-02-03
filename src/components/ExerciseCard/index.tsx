@@ -1,5 +1,5 @@
 //ExerciseCard/index.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ExerciseCardProps } from './types';
 import { getYoutubeEmbedUrl } from '../../utils/youtube';
 import { ExerciseTutorial } from '../ExerciseTutorial';
@@ -9,69 +9,67 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({ exercise }) => {
   const [currentVariation, setCurrentVariation] = useState('Principal');
   const [isTutorialOpen, setIsTutorialOpen] = useState(false);
 
-  useEffect(() => {
-    setCurrentVideo(exercise.videoUrl);
-    setCurrentVariation('Principal');
-  }, [exercise]);
-
   return (
-    <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md mb-4 sm:mb-6 border border-gray-200">
-    <h2 className="text-lg sm:text-xl font-bold mb-2 text-blue-700">{exercise.name}</h2>
-    <p className="text-gray-700 mb-2 sm:mb-3 text-sm">{exercise.description}</p>
-    <p className="text-gray-800 font-semibold mb-2 sm:mb-3 text-sm">Repetições: {exercise.repetitions}</p>
-  
-  <button
-    onClick={() => setIsTutorialOpen(true)}
-    className="mb-3 sm:mb-4 px-3 py-1.5 bg-green-500 text-white text-sm font-medium rounded-lg hover:bg-green-600 transition-colors"
-  >
-    Mais informações
-  </button>
+    <div className="bg-white p-4 rounded-lg shadow-sm mb-6 w-full max-w-full overflow-hidden">
+      <div className="flex flex-col break-words">
+        <h2 className="text-xl font-bold mb-2 text-blue-700">{exercise.name}</h2>
+        <p className="text-gray-700 mb-3">{exercise.description}</p>
+        <p className="text-gray-800 font-semibold mb-3">Repetições: {exercise.repetitions}</p>
+      </div>
 
-  <div className="aspect-w-16 aspect-h-9 mb-4">
-  <iframe
-    className="w-full h-full"
-    src={getYoutubeEmbedUrl(currentVideo)}
-    title={`${exercise.name} - ${currentVariation}`}
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  ></iframe>
-</div>
+      <button
+        onClick={() => setIsTutorialOpen(true)}
+        className="mb-4 px-4 py-2 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors w-full sm:w-auto"
+      >
+        Mais informações
+      </button>
 
-      <div className="space-y-3 mt-6">
-        <h3 className="font-bold text-xl text-blue-700 mb-3">Variações:</h3>
-        <button
-          onClick={() => {
-            setCurrentVideo(exercise.videoUrl);
-            setCurrentVariation('Principal');
-          }}
-          className={`block w-full text-left p-4 rounded-lg transition-colors text-lg ${
-            currentVariation === 'Principal' 
-              ? 'bg-blue-600 text-white' 
-              : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-          }`}
-          aria-label={`Mostrar versão principal de ${exercise.name}`}
-        >
-          <span className="font-bold">{exercise.name} (Principal)</span>
-        </button>
-        {exercise.variations.map((variation, index) => (
+      <div className="relative w-full pt-[56.25%] mb-4">
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          src={getYoutubeEmbedUrl(currentVideo)}
+          title={`${exercise.name} - ${currentVariation}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      <div className="space-y-3">
+        <h3 className="font-bold text-lg text-blue-700 mb-3">Variações:</h3>
+        <div className="space-y-2 w-full">
           <button
-            key={index}
             onClick={() => {
-              setCurrentVideo(variation.videoUrl);
-              setCurrentVariation(variation.name);
+              setCurrentVideo(exercise.videoUrl);
+              setCurrentVariation('Principal');
             }}
-            className={`block w-full text-left p-4 rounded-lg transition-colors text-lg ${
-              currentVariation === variation.name 
-                ? 'bg-blue-600 text-white' 
+            className={`w-full text-left p-4 rounded-lg transition-colors ${
+              currentVariation === 'Principal'
+                ? 'bg-blue-600 text-white'
                 : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
             }`}
-            aria-label={`Mostrar variação: ${variation.name}`}
           >
-            <span className="font-bold">{variation.name}</span>
-            <p className="text-base text-gray-600">{variation.description}</p>
+            <span className="font-bold break-words">{exercise.name} (Principal)</span>
           </button>
-        ))}
+          
+          {exercise.variations.map((variation, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setCurrentVideo(variation.videoUrl);
+                setCurrentVariation(variation.name);
+              }}
+              className={`w-full text-left p-4 rounded-lg transition-colors ${
+                currentVariation === variation.name
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+              }`}
+            >
+              <span className="font-bold break-words">{variation.name}</span>
+              <p className="text-sm mt-1 break-words">{variation.description}</p>
+            </button>
+          ))}
+        </div>
       </div>
 
       <ExerciseTutorial
